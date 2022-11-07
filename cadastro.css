@@ -1,0 +1,36 @@
+
+body{
+background-color: rgb(176, 216, 252);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formulario{
+    background-color: rgb(240, 240, 255);
+    text-align: center;
+    border: solid;
+    border-color: black;
+    border-radius: 2vh;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    padding: 2%;
+}
+label{
+    float: left;
+}
+input{
+    float: right;
+    width: 75%;
+    height: 20px;
+}
+.fone{
+    float: right;
+    width: 75%;
+    height: 20px;
+}
+.aceite{
+    float: left;
+    width: 80%;
+}
+.campos{
+    height: 30px;
+}

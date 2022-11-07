@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cadastro.css'>
+</head>
+<body>
+    <p></p>
+    <form class="formulario" autocomplete="off" method="post" action="index.html">
+        <div class="campos">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="usuario_nome" />
+        </div>
+        <div class="campos">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="usuario_email" />
+        </div>   
+        <div class="campos">
+            <label for="email">Telefone:</label>
+            <input class="fone" type="telefone" id="telefone" name="usuario_email" />
+        </div>   
+        <p></p>
+        <div>
+            <label for="email"><input class="aceite" type="checkbox" name="aceite" id="aceite" /></label>
+             Aceito os termos de uso e políticas de privacidade
+        </div>   
+        <p></p>
+        <div class="button">
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="jquery.mask.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        $(function() {
+            var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+              },
+              spOptions = {
+                onKeyPress: function(val, e, field, options) {
+                    field.mask(SPMaskBehavior.apply({}, arguments), options);
+                  }
+              };
+          
+              $('.fone').mask(SPMaskBehavior, spOptions);
+        });
+    </script>
+</body>
+</html>
